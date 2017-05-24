@@ -10,7 +10,7 @@
 }
 
 .nav-bar__hamburger {
-  width: 80px;
+  display: flex;
 }
 
 .nav-bar__menu {

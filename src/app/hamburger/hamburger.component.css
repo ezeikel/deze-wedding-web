@@ -107,8 +107,10 @@
 
 .hamburger {
   outline: none;
+  padding: 0;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   background-color: #CDA349;
+  height: 2px;
 }
