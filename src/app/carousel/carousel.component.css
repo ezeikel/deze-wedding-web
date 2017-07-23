@@ -31,11 +31,11 @@
 
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .slide__sub-title {
-  color: #fff;
+  color: var(--color-white);
   font-family: 'brandon-grotesque';
   font-size: 18px;
 }

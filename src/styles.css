@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400,700');
 
-* {
-  box-sizing: border-box;
-}
-
 :root {
   /* Colors */
   --color-primary: #F7E7CE;
@@ -16,6 +12,10 @@
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 32px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {

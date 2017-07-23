@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HeroImageComponent } from './hero-image/hero-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HamburgerComponent,
     HeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    HeroImageComponent
   ],
   imports: [
     BrowserModule,

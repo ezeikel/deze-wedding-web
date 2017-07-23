@@ -1,7 +1,7 @@
 header {
   height: 80px;
   padding: var(--spacing-small);
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-medium);
   display: flex;
   background-color: var(--color-secondary);
 }
