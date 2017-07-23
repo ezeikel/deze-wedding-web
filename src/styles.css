@@ -14,6 +14,14 @@
   --spacing-large: 32px;
 }
 
+::selection {
+  background: var(--color-secondary); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--color-secondary); /* Gecko Browsers */
+}
+
 * {
   box-sizing: border-box;
 }

@@ -11,9 +11,9 @@ import { Image } from '../image/image.model';
 })
 export class CarouselComponent implements AfterViewInit {
   images: Image[] = [
-    new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-1.jpg'),
-    new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-2.jpg'),
-    new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-3.jpg')
+    // new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-1.jpg'),
+    // new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-2.jpg'),
+    // new Image('Bonkaz', 'Bonkaz performing at his headline show', '../../assets/img/proposal-3.jpg')
   ];
   constructor() { }
 
