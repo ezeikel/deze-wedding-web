@@ -1,7 +1,41 @@
+.hero-carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .hero-carousel__slide {
-  height: 100vh;
+  /*height: 600px;
+  max-height: 75vh;*/
+  height: calc(100vh - 100px);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position:  top center;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 80px;
+  outline: none;
+}
+
+.slide__title {
+  width: 70%;
+}
+
+.slide__title a {
+  font-family: 'brandon-grotesque';
+
+  font-size: 90px;
+  line-height: 94px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slide__sub-title {
+  color: #fff;
+  font-family: 'brandon-grotesque';
+  font-size: 18px;
 }

@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400,700');
+
 * {
   box-sizing: border-box;
 }
 
+:root {
+  /* Colors */
+  --color-primary: #F7E7CE;
+  --color-secondary: #F1D3D1;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gold: #CDA349;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+}
+
 body {
-  font-family: 'aniuk';
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
 
@@ -13,6 +29,10 @@ ul {
 
 a, a:link, a:active, a:visited, a:hover {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
 }
 
 .wf-loading {

@@ -1,10 +1,17 @@
 header {
-  padding: 20px;
+  height: 80px;
+  padding: var(--spacing-small);
+  margin-bottom: var(--spacing-large);
   display: flex;
+  background-color: var(--color-secondary);
 }
 
-.site-logo img {
-  width: 350px;
+.site-logo {
+  height: 100%;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .nav-bar__container {
@@ -27,23 +34,15 @@ header {
 
 .nav-bar__link a {
   position: relative;
-  color: #000;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-white);
+  transition: color 0.3s ease-in-out;
 }
 
-.nav-bar__link a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background-color: #CDA349;
-  width: 100%;
-  transform: translateX(-150%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-bar__link:hover a:after {
-  transform: translateX(0);
+.nav-bar__link a:hover {
+  color: var(--color-gold)
 }
 
 .nav-bar__link + .nav-bar__link {
