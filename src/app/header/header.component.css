@@ -1,23 +1,24 @@
 header {
   height: 80px;
   padding: var(--spacing-small);
-  margin-bottom: var(--spacing-medium);
-  display: flex;
   background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  height: 100%;
 }
 
 .site-logo {
   height: 100%;
-  width: 160px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.nav-bar__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.nav-bar {
+  display: none;
 }
 
 .nav-bar__links {
@@ -48,3 +49,24 @@ header {
 .nav-bar__link + .nav-bar__link {
   margin-left: 15px;
 }
+
+@media (min-width: 576px) {
+  .logo-container {
+    width: 30%;
+  }
+
+  .site-logo {
+    width: 160px;
+  }
+
+  .nav-bar {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}

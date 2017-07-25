@@ -1,9 +1,11 @@
-<div [ngClass]="['hero-image']" [ngStyle]="{'background-image': 'url(' + hero.src + ')'}">
-  <section [ngClass]="['hero-image__info']">
-    <h2 [ngClass]="['hero-image__title']">{{ hero.title }}</h2>
-    <div class="hero-image__quote">
-      <span [ngClass]="['quote__copy']">" {{ hero.quote }} "</span>
-      <span class="quote__ref">{{ hero.quoteRef }}</span>
-    </div>
-  </section>
+<div class="row">
+  <div [ngClass]="['hero-image']" [ngStyle]="{'background-image': 'url(' + hero.src + ')'}">
+    <section [ngClass]="['hero-image__info']">
+      <h2 [ngClass]="['hero-image__title']">{{ hero.title }}</h2>
+      <div class="hero-image__quote">
+        <span [ngClass]="['quote__copy']">" {{ hero.quote }} "</span>
+        <span class="quote__ref">{{ hero.quoteRef }}</span>
+      </div>
+    </section>
+  </div>  
 </div>

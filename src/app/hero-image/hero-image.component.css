@@ -1,5 +1,4 @@
 .hero-image {
-  margin-bottom: var(--spacing-medium);
   width: 100%;
   height: calc(100vh - 112px);
   display: flex;
@@ -11,6 +10,15 @@
 
 }
 
+.hero-image__title {
+  font-size: 54px;
+  line-height: 54px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
 .hero-image__quote > span {
   display: block;
   color: var(--color-white);
@@ -19,7 +27,7 @@
 
 .quote__copy {
   color: var(--color-white);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .quote__ref {
@@ -28,10 +36,22 @@
 }
 
 .hero-image__title {
-  font-size: 90px;
-  line-height: 94px;
-
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-white);
+}
+
+@media (min-width: 576px) {
+  .hero-image__title {
+    font-size: 90px;
+    line-height: 94px;
+  }
+
+  .quote__copy {
+    font-size: 18px;
+  }
+
+  .quote__ref {
+    font-size: 14px;
+  }
 }

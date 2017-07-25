@@ -12,6 +12,13 @@
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 32px;
+
+  /* Breakpoints */
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+
 }
 
 ::selection {
@@ -33,6 +40,7 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 a, a:link, a:active, a:visited, a:hover {
