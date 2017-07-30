@@ -6,7 +6,7 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:  top center;
+  background-position:  center right;
 
 }
 
@@ -42,7 +42,19 @@
 }
 
 @media (min-width: 576px) {
+  .hero-image {
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-position:  center center;
+  }
+
+  .hero-image__info {
+    width: 50%;
+    margin-top: 50px;
+  }
+
   .hero-image__title {
+    margin: 0;
     font-size: 90px;
     line-height: 94px;
   }
