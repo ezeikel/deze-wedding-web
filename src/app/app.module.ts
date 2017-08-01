@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { firebaseConfig } from './../environments/firebase.config';
+
 import { AppComponent } from './app.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { HeaderComponent } from './header/header.component';
@@ -53,6 +57,8 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     RouterModule.forRoot(
       routes,
       { enableTracing: true }
