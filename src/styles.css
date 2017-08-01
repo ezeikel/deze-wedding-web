@@ -55,6 +55,12 @@ h1 {
   text-align: center;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
 .p-title {
   margin: 30px 0;
 }
