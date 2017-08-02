@@ -7,6 +7,10 @@
   --color-black: #000;
   --color-white: #fff;
   --color-gold: #CDA349;
+  --color-gold-lighter: #d2ad5d;
+  --color-light-grey: #ecf0f1;
+  --color-red: #e74c3c;
+  --color-green: #2ecc71;
 
   /* Spacing */
   --spacing-small: 8px;
@@ -48,6 +52,7 @@ a, a:link, a:active, a:visited, a:hover {
 }
 
 h1, h2, h3, h4, h5 {
+  margin-top: 0;
   font-family: 'Playfair Display', serif;
 }
 
@@ -55,10 +60,44 @@ h1 {
   text-align: center;
 }
 
+form {
+  margin-bottom: 30px;
+}
+
 button {
   border: none;
   outline: none;
   background: none;
+}
+
+input {
+  outline: 0;
+  margin-bottom: 15px;
+}
+
+button a, input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 15px 90px;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  transition: background-color 0.3s ease-in-out;
+}
+
+button a:hover, input[type="submit"]:not(:disabled):hover {
+  background-color: var(--color-gold-lighter);
+}
+
+input[type="submit"] {
+  border: 0;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+input.ng-dirty.ng-invalid {
+  border-color: var(--color-red);
 }
 
 .p-title {

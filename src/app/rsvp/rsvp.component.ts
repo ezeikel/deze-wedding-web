@@ -12,13 +12,16 @@ export class RsvpComponent implements OnInit {
   guest: Guest;
   items: FirebaseListObservable<any[]>;
 
+  submitted: boolean = false;
+
   constructor(private db: AngularFireDatabase) {
     this.items = db.list('/guests');
-    this.guest = new Guest('','','',false);
+    this.guest = new Guest('','','','');
   }
 
-  submit() {
+  onSubmit() {
     this.items.push(this.guest);
+    this.submitted = true;
   }
 
   ngOnInit() {
