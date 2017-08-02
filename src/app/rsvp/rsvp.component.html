@@ -1,1 +1,9 @@
 <h1>RSVP</h1>
+
+<ul>
+  <li *ngFor="let item of items | async">
+    {{item.$key}}: {{item.$value}}
+  </li>
+</ul>
+
+<button class="hero-btn" (click)="submit()">RSVP</button>

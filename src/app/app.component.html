@@ -1,9 +1,4 @@
 <div class="container-fluid">
   <app-header></app-header>
-  <ul>
-    <li *ngFor="let item of items | async">
-      {{item.$key}}: {{item.$value}}
-    </li>
-  </ul>
   <router-outlet></router-outlet>
 </div>
