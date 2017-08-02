@@ -6,4 +6,13 @@
   </li>
 </ul>
 
+  <label>First Name:</label>
+  <input type="text" [(ngModel)]="this.guest.firstName" />
+  <label>Last Name:</label>
+  <input type="text" [(ngModel)]="this.guest.lastName" />
+  <label>Email:</label>
+  <input type="text" [(ngModel)]="this.guest.email" />
+  <label>Plus One:</label>
+  <input type="text" [(ngModel)]="this.guest.plusOne"/>
+
 <button class="hero-btn" (click)="submit()">RSVP</button>
