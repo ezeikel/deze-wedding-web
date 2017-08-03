@@ -57,6 +57,7 @@
   background-color: var(--color-gold);
   color: var(--color-white);
   text-align: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -83,5 +84,9 @@
 
   .quote__ref {
     font-size: 14px;
+  }
+
+  .hero-btn a:hover {
+    background-color: var(--color-gold-lighter)
   }
 }

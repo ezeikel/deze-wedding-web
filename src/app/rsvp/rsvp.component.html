@@ -7,21 +7,22 @@
   <div class="row">
     <div class="col-xs-12 col-md-9 form-container">
       <form #rsvpForm="ngForm" (ngSubmit)="onSubmit();rsvpForm.reset()">
-        <div *ngIf="submitted" class="row form-success-message">
-          <p>Thank you for the RSVP. See you next month! :)</p>
+        <div *ngIf="submitted" class="form-success-message">
+          <p>Thank you {{guestName}} for the RSVP. See you next month! :)</p>
         </div>
         <label>First Name:</label>
-        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" required />
+        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" required />
         <label>Last Name:</label>
-        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" required />
+        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" required />
         <label>Email:</label>
-        <input type="text" [(ngModel)]="this.guest.email" name="email" required />
+        <input type="text" [(ngModel)]="this.guest.email" name="email" placeholder="biggie@smalls.com" required />
         <label>Plus One (First Name + Last Name):</label>
-        <input type="text" [(ngModel)]="this.guest.plusOne" name="plusOne" required />
+        <input type="text" [(ngModel)]="this.guest.plusOne" name="plusOne" placeholder="Puff Daddy" required />
         <input [disabled]="!rsvpForm.form.valid" type="submit" value="Send" />
       </form>
     </div>
     <div class="col-xs-12 col-md-3 stats-container">
+      <h3>Counter</h3>
       <ul>
         <li *ngFor="let item of items | async">
           {{item.$key}}: {{item.$value}}

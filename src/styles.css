@@ -7,7 +7,7 @@
   --color-black: #000;
   --color-white: #fff;
   --color-gold: #CDA349;
-  --color-gold-lighter: #d2ad5d;
+  --color-gold-lighter: #d4af61;
   --color-light-grey: #ecf0f1;
   --color-red: #e74c3c;
   --color-green: #2ecc71;
@@ -72,6 +72,7 @@ button {
 
 input {
   outline: 0;
+  border: 0;
   margin-bottom: 15px;
 }
 
@@ -98,6 +99,19 @@ input[type="submit"] {
 
 input.ng-dirty.ng-invalid {
   border-color: var(--color-red);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-light-grey);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: var(--color-light-grey);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: var(--color-light-grey);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--color-light-grey);
 }
 
 .p-title {

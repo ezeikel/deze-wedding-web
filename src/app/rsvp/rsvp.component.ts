@@ -11,6 +11,7 @@ import { Guest } from '../guest/guest.model';
 export class RsvpComponent implements OnInit {
   guest: Guest;
   items: FirebaseListObservable<any[]>;
+  guestName: string;
 
   submitted: boolean = false;
 
@@ -20,7 +21,10 @@ export class RsvpComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.guest.firstName);
+    this.guestName = this.guest.firstName;
     this.items.push(this.guest);
+
     this.submitted = true;
   }
 
