@@ -86,6 +86,10 @@
     font-size: 14px;
   }
 
+  .hero-btn {
+    width: 50%;
+  }
+
   .hero-btn a:hover {
     background-color: var(--color-gold-lighter)
   }
