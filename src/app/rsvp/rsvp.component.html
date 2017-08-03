@@ -11,13 +11,13 @@
           <p>Thank you {{guestName}} for the RSVP. See you next month! :)</p>
         </div>
         <label>First Name:</label>
-        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" required />
+        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" maxlength="30" required />
         <label>Last Name:</label>
-        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" required />
+        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" maxlength="30"  required />
         <label>Email:</label>
-        <input type="text" [(ngModel)]="this.guest.email" name="email" placeholder="biggie@smalls.com" required />
+        <input type="email" [(ngModel)]="this.guest.email" name="email" placeholder="biggie@smalls.com" maxlength="50"  required />
         <label>Plus One (First Name + Last Name):</label>
-        <input type="text" [(ngModel)]="this.guest.plusOne" name="plusOne" placeholder="Puff Daddy" required />
+        <input type="text" [(ngModel)]="this.guest.plusOne" name="plusOne" placeholder="Puff Daddy" maxlength="30"  required />
         <input [disabled]="!rsvpForm.form.valid" type="submit" value="Send" />
       </form>
     </div>

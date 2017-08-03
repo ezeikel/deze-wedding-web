@@ -71,14 +71,16 @@ button {
 }
 
 input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   outline: 0;
   border: 0;
   margin-bottom: 15px;
 }
 
 button a, input[type="submit"] {
-  display: flex;
-  justify-content: center;
+  display: block;
   height: 100%;
   width: 100%;
   padding: 15px 90px;

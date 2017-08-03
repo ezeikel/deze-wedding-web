@@ -47,10 +47,10 @@
 
 .hero-btn {
   margin: 0 auto;
+  padding: 0;
 }
 
 .hero-btn a {
-  display: flex;
   height: 100%;
   width: 100%;
   padding: 15px 90px;
