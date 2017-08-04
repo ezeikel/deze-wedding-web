@@ -25,6 +25,7 @@
         "styles.css"
       ],
       "scripts": [
+        "../ga.js",
         "../font-kit.js"
       ],
       "environmentSource": "environments/environment.ts",
