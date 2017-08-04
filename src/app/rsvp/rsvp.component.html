@@ -22,12 +22,13 @@
       </form>
     </div>
     <div class="col-xs-12 col-md-3 stats-container">
-      <h3>Counter</h3>
-      <ul>
+      <h3>Counter:</h3>
+      <span class="total-rsvp">{{ (items | async)?.length }}</span>
+      <!-- <ul>
         <li *ngFor="let item of items | async">
           {{item.$key}}: {{item.$value}}
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </div>
