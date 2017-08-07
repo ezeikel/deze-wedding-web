@@ -16,7 +16,7 @@ export class RsvpComponent implements OnInit {
 
   constructor(private db: AngularFireDatabase) {
     this.items = db.list('/guests');
-    this.guest = new Guest('','','','');
+    this.guest = new Guest('','','', false, {});
   }
 
   onSubmit() {

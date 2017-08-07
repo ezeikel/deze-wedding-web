@@ -16,8 +16,14 @@
         <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" maxlength="30"  required />
         <label>Email:</label>
         <input type="email" [(ngModel)]="this.guest.email" name="email" placeholder="biggie@smalls.com" maxlength="50"  required />
-        <label>Plus One (First Name + Last Name):</label>
-        <input type="text" [(ngModel)]="this.guest.plusOne" name="plusOne" placeholder="Puff Daddy" maxlength="30"  required />
+        <label>Plus One?</label>
+        <input type="checkbox" [(ngModel)]="this.guest.bringingPlusOne" name="bringingPlusOne" />
+        <span *ngIf="this.guest.bringingPlusOne" class="plus-one-details">
+          <label>First Name</label>
+          <input type="text" [(ngModel)]="this.guest.plusOne.firstName" name="plusOneFirstName" placeholder="Puff" maxlength="30" />
+          <label>Last Name</label>
+          <input type="text" [(ngModel)]="this.guest.plusOne.lastName" name="plusOneLastName" placeholder="Daddy" maxlength="30" />
+        </span>
         <input [disabled]="!rsvpForm.form.valid" type="submit" value="Send" />
       </form>
     </div>

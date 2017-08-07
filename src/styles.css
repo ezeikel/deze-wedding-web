@@ -70,12 +70,16 @@ button {
   background: none;
 }
 
-input {
+input[type=text], input[type=email] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0;
   border: 0;
+  margin-bottom: 15px;
+}
+
+input[type=checkbox] {
   margin-bottom: 15px;
 }
 
