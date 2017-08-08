@@ -70,7 +70,7 @@ button {
   background: none;
 }
 
-input[type=text], input[type=email] {
+input[type="text"], input[type="email"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -79,7 +79,7 @@ input[type=text], input[type=email] {
   margin-bottom: 15px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   margin-bottom: 15px;
 }
 

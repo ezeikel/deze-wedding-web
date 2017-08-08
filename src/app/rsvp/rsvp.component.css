@@ -14,7 +14,7 @@ label {
   font-weight: 200;
 }
 
-input[type=text], input[type=email] {
+input[type="text"], input[type="email"] {
   flex: 1;
   padding: 1em;
   border: 1px solid #ecf0f1;
