@@ -23,6 +23,7 @@ input[type=text], input[type=email] {
 }
 
 input[type="submit"] {
+  min-height: 22px; /*TODO: Hack. Find out why this suddenly broke height.*/
   text-align: center;
   margin-bottom: 0;
 }
