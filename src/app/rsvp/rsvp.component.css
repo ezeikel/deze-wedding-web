@@ -35,7 +35,7 @@ button[type="submit"] a:hover {
   color: var(--color-white);
 }
 
-button[type="submit"]:disabled {
+button[type="submit"]:disabled a {
   text-decoration: line-through;
   cursor: not-allowed;
   background-color: var(--color-gold-lighter);
