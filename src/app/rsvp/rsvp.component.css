@@ -22,13 +22,20 @@ input[type="text"], input[type="email"] {
   width: 100%;
 }
 
-input[type="submit"] {
-  min-height: 22px; /*TODO: Hack. Find out why this suddenly broke height.*/
+button {
+  padding: 0;
+}
+
+button[type="submit"] {
   text-align: center;
   margin-bottom: 0;
 }
 
-input[type="submit"]:disabled {
+button[type="submit"] a:hover {
+  color: var(--color-white);
+}
+
+button[type="submit"]:disabled {
   text-decoration: line-through;
   cursor: not-allowed;
   background-color: var(--color-gold-lighter);
