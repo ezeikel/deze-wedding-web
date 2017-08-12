@@ -41,6 +41,13 @@ button[type="submit"]:disabled a {
   background-color: var(--color-gold-lighter);
 }
 
+.error-message {
+  padding: 15px;
+  margin-bottom: 30px;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
 .form-success-message {
   background-color: var(--color-green);
   color: var(--color-white);
