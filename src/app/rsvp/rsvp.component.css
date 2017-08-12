@@ -43,7 +43,7 @@ button[type="submit"]:disabled a {
 
 .error-message {
   padding: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: var(--color-white);
   background-color: var(--color-secondary);
 }
