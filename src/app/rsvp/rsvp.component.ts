@@ -19,8 +19,24 @@ export class RsvpComponent implements OnInit {
     this.guest = new Guest('','','', false, {});
   }
 
+  upperCaseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  lowerCase(string) {
+    return string.toLowerCase();
+  }
+
   onSubmit() {
+    this.guest.firstName = this.upperCaseFirstLetter(this.lowerCase(this.guest.firstName));
+    this.guest.lastName = this.upperCaseFirstLetter(this.lowerCase(this.guest.lastName));
     this.guestName = this.guest.firstName;
+
+    if(this.guest.plusOne) {
+      this.guest.plusOne['firstName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['firstName']));
+      this.guest.plusOne['lastName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['lastName']));
+    }
+
     this.items.push(this.guest);
     this.submitted = true;
   }
