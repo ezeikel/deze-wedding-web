@@ -15,23 +15,17 @@
           <div *ngIf="firstName.errors.required">
             First Name is required.
           </div>
-          <div *ngIf="firstName.errors.minlength">
-            First Name must be at least 2 characters long.
-          </div>
         </div>
         <label>First Name:</label>
-        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" minlength="2" maxlength="30" #firstName="ngModel"  required />
+        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" maxlength="30" #firstName="ngModel"  required />
 
         <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="error-message">
           <div *ngIf="lastName.errors.required">
             Last Name is required.
           </div>
-          <div *ngIf="lastName.errors.minlength">
-            Last Name must be at least 2 characters long.
-          </div>
         </div>
         <label>Last Name:</label>
-        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" minlength="2" maxlength="30" #lastName="ngModel"  required />
+        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" maxlength="30" #lastName="ngModel"  required />
 
         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
           <div *ngIf="email.errors.required">
