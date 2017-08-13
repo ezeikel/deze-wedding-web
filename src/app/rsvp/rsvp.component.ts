@@ -32,7 +32,7 @@ export class RsvpComponent implements OnInit {
     this.guest.lastName = this.upperCaseFirstLetter(this.lowerCase(this.guest.lastName));
     this.guestName = this.guest.firstName;
 
-    if(this.guest.plusOne) {
+    if(Object.keys(this.guest.plusOne).length > 0) {
       this.guest.plusOne['firstName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['firstName']));
       this.guest.plusOne['lastName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['lastName']));
     }
