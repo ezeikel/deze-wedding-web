@@ -14,7 +14,7 @@ header {
   position: absolute;
   top: 50%;
   right: 15px;
-  color: white;
+  color: var(--color-white);
   font-size: 22px;
   margin-top: -11px;
 }
@@ -80,6 +80,11 @@ header {
 }
 
 .mobile-menu .close-btn {
+  display: none;
+}
+
+.mobile-menu.active .close-btn {
+  display: block;
   font-size: 26px;
   font-weight: 100;
   position: fixed;

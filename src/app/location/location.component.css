@@ -1,0 +1,26 @@
+.location {
+  margin-bottom: 30px;
+}
+
+.location__image {
+  height: 350px;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.location__title {
+  margin-bottom: 30px;
+}
+
+.location__address {
+  color: var(--color-grey);
+  font-weight: 100;
+}
+
+@media (min-width: 576px) {
+  .location__title {
+    text-align: center;
+  }
+}
