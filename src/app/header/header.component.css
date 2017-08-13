@@ -69,11 +69,14 @@ header {
   z-index: 1;
   background-color: var(--color-secondary);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+  overflow-y: hidden;
 }
 
 .mobile-menu.active {
   opacity: 1;
+  height: 100%;
 }
 
 .mobile-menu .close-btn {
