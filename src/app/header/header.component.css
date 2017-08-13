@@ -10,6 +10,15 @@ header {
   height: 100%;
 }
 
+.logo-container .hamburger {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: white;
+  font-size: 22px;
+  margin-top: -11px;
+}
+
 .site-logo {
   height: 100%;
   background-repeat: no-repeat;
@@ -21,8 +30,9 @@ header {
   display: none;
 }
 
-.nav-bar__links {
+.nav-bar > .nav-bar__links {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
@@ -50,6 +60,47 @@ header {
   margin-left: 15px;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--color-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+}
+
+.mobile-menu .close-btn {
+  font-size: 26px;
+  font-weight: 100;
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  color: var(--color-white);
+}
+
+.mobile-menu .nav-bar__links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.mobile-menu .nav-bar__link {
+  margin-left: 0;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.mobile-menu .nav-bar__link a {
+  font-size: 23px;
+}
+
 @media (min-width: 576px) {
   .logo-container {
     width: 30%;
@@ -64,6 +115,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+  }
+
+  .logo-container .hamburger {
+    display: none;
   }
 }
 

@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  mobileMenuActive: boolean;
 
-  constructor() { }
+  constructor() {
+    this.mobileMenuActive = false;
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenuActive = !this.mobileMenuActive;
+  }
 
   ngOnInit() {
   }

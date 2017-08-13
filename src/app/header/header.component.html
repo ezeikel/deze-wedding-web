@@ -1,6 +1,7 @@
 <header class="row">
   <div class="logo-container col-xs-12 col-md-6">
     <div class="site-logo" style="background-image:url('../../assets/img/deze-logo-white.png')"></div>
+    <i (click)="toggleMobileMenu()" class="fa fa-bars hamburger" aria-hidden="true"></i>
   </div>
   <nav class="nav-bar col-xs-12 col-md-6">
     <ul class="nav-bar__links">
@@ -13,4 +14,16 @@
       <li class="nav-bar__link"><a routerLink="/rsvp">RSVP</a></li>
     </ul>
   </nav>
+  <div class="mobile-menu" [ngClass]="{active: mobileMenuActive}" >
+    <span (click)="toggleMobileMenu()" class="close-btn">X</span>
+    <ul class="nav-bar__links">
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/">Home</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/story">Story</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/location">Location</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()"routerLink="/schedule">Schedule</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/gallery">Gallery</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/bridal-party">Bridal Party</a></li>
+      <li class="nav-bar__link"><a (click)="toggleMobileMenu()" routerLink="/rsvp">RSVP</a></li>
+    </ul>
+  </div>
 </header>
