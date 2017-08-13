@@ -21,6 +21,9 @@
 
 .picture {
   background-color: tomato;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 150px;
   min-width: 150px;
   width: 150px;

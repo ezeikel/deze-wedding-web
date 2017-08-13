@@ -7,7 +7,9 @@
 }
 
 .image {
-  background-color: tomato;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 8px;
   min-width: 350px;
   min-height: 350px;
@@ -22,10 +24,6 @@
   .image {
     width: calc(20% - 8px);
   }
-
-  /*.image-container > div:nth-child(3n) {
-    margin-right: 0;
-  }*/
 }
 
 @media (min-width: 768px) {}
