@@ -41,10 +41,20 @@
         <label>Plus One?</label>
         <input type="checkbox" [(ngModel)]="this.guest.bringingPlusOne" name="bringingPlusOne" />
         <span *ngIf="this.guest.bringingPlusOne" class="plus-one-details">
+          <div *ngIf="plusOneFirstName.invalid && (plusOneFirstName.dirty || plusOneFirstName.touched)" class="error-message">
+            <div *ngIf="plusOneFirstName.errors.required">
+              First Name is required.
+            </div>
+          </div>
           <label>First Name</label>
-          <input type="text" [(ngModel)]="this.guest.plusOne.firstName" name="plusOneFirstName" placeholder="Puff" maxlength="30" />
+          <input type="text" [(ngModel)]="this.guest.plusOne.firstName" name="plusOneFirstName" placeholder="Puff" maxlength="30" #plusOneFirstName="ngModel" [required]="this.guest.plusOne" />
+          <div *ngIf="plusOneLastName.invalid && (plusOneLastName.dirty || plusOneLastName.touched)" class="error-message">
+            <div *ngIf="plusOneLastName.errors.required">
+              Last Name is required.
+            </div>
+          </div>
           <label>Last Name</label>
-          <input type="text" [(ngModel)]="this.guest.plusOne.lastName" name="plusOneLastName" placeholder="Daddy" maxlength="30" />
+          <input type="text" [(ngModel)]="this.guest.plusOne.lastName" name="plusOneLastName" placeholder="Daddy" maxlength="30" #plusOneLastName="ngModel" [required]="this.guest.plusOne" />
         </span>
         <button [disabled]="!rsvpForm.form.valid" type="submit"><a>Submit</a> </button>
       </form>
