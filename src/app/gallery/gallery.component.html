@@ -7,12 +7,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="image-container">
-        <div class="image" style="background-image:url('../../assets/img/prewed-1.jpg')"></div>
-        <div class="image" style="background-image:url('../../assets/img/prewed-2.jpg')"></div>
-        <div class="image" style="background-image:url('../../assets/img/prewed-3.jpg')"></div>
-        <div class="image" style="background-image:url('../../assets/img/prewed-4.jpg')"></div>
-        <div class="image" style="background-image:url('../../assets/img/prewed-5.jpg')"></div>
-        <div class="image" style="background-image:url('../../assets/img/prewed-6.jpg')"></div>
+        <div *ngFor="let image of images" class="image" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
       </div>
     </div>
   </div>
