@@ -82,6 +82,10 @@ button[type="submit"]:disabled a {
   background-color: var(--color-gold);
 }
 
+.disclaimer {
+  font-size: 13px;
+}
+
 @media (min-width: 576px) {
   .form-container {
     align-items: center;

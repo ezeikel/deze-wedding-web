@@ -142,6 +142,15 @@ input.ng-dirty.ng-invalid {
   width: 100%;
 }
 
+.p-subtitle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.p-subtitle {
+  margin-bottom: 30px;
+}
+
 .wf-loading {
   display: none;
 }
