@@ -13,7 +13,6 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { AppComponent } from './app.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { HeaderComponent } from './header/header.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { HeroImageComponent } from './hero-image/hero-image.component';
 import { StoryComponent } from './story/story.component';
 import { ScheduleComponent } from './schedule/schedule.component';
@@ -45,7 +44,6 @@ const routes: Routes = [
     AppComponent,
     HamburgerComponent,
     HeaderComponent,
-    CarouselComponent,
     HeroImageComponent,
     StoryComponent,
     ScheduleComponent,
