@@ -8,8 +8,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './../environments/firebase.config';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { AppComponent } from './app.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { HeaderComponent } from './header/header.component';
@@ -41,6 +41,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    CapitalizePipe,
     AppComponent,
     HamburgerComponent,
     HeaderComponent,
@@ -61,7 +62,6 @@ const routes: Routes = [
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    LazyLoadImageModule,
     RouterModule.forRoot(
       routes,
       { enableTracing: true }

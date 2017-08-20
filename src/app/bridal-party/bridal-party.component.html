@@ -8,32 +8,11 @@
     <section class="bridal-party__bridesmaids col-xs-12 col-md-6">
       <h3 class="bridal-party__title">Meet the Bridesmaids</h3>
       <div class="bridesmaids">
-        <div class="avatar bridesmaid-avatar">
+        <div *ngFor="let bridesmaid of bridalParty.bridesmaids" class="avatar bridesmaid-avatar">
           <div class="bridesmaid">
-            <span class="name">Rosa</span>
-            <div class="picture"></div>
-            <div class="title">Chief Bridesmaid</div>
-          </div>
-        </div>
-        <div class="avatar bridesmaid-avatar">
-          <div class="bridesmaid">
-            <span class="name">Alex</span>
-            <div class="picture"></div>
-            <div class="title">Bridesmaid</div>
-          </div>
-        </div>
-        <div class="avatar bridesmaid-avatar">
-          <div class="bridesmaid">
-            <span class="name">Mary</span>
-            <div class="picture"></div>
-            <div class="title">Bridesmaid</div>
-          </div>
-        </div>
-        <div class="avatar bridesmaid-avatar">
-          <div class="bridesmaid">
-            <span class="name">Jasmine</span>
-            <div class="picture"></div>
-            <div class="title">Bridesmaid</div>
+            <span class="name">{{bridesmaid.name | capitalize}}</span>
+            <div class="picture" [ngStyle]="{'background-image': 'url(' + bridesmaid.src + ')'}"></div>
+            <div class="title">{{bridesmaid.role}}</div>
           </div>
         </div>
       </div>
@@ -41,39 +20,11 @@
     <section class="bridal-party__groomsmen col-xs-12 col-md-6">
       <h3 class="bridal-party__title">Meet the Groomsmen</h3>
       <div class="groomsmen">
-        <div class="avatar groomsman-avatar">
+        <div *ngFor="let groomsman of bridalParty.groomsmen" class="avatar groomsman-avatar">
           <div class="groomsman">
-            <span class="name">Deji</span>
-            <div class="picture"></div>
-            <div class="title">Best Man</div>
-          </div>
-        </div>
-        <div class="avatar groomsman-avatar">
-          <div class="groomsman">
-            <span class="name">Anthony</span>
-            <div class="picture"></div>
-            <div class="title">Groomsman</div>
-          </div>
-        </div>
-        <div class="avatar groomsman-avatar">
-          <div class="groomsman">
-            <span class="name">Richard</span>
-            <div class="picture" style="background-image:url('../../assets/img/richard.jpg')"></div>
-            <div class="title">Groomsman</div>
-          </div>
-        </div>
-        <div class="avatar groomsman-avatar">
-          <div class="groomsman">
-            <span class="name">Yemi</span>
-            <div class="picture"></div>
-            <div class="title">Groomsman</div>
-          </div>
-        </div>
-        <div class="avatar groomsman-avatar">
-          <div class="groomsman">
-            <span class="name">Marvin</span>
-            <div class="picture"></div>
-            <div class="title">Groomsman</div>
+            <span class="name">{{groomsman.name | capitalize}}</span>
+            <div class="picture" [ngStyle]="{'background-image': 'url(' + groomsman.src + ')'}"></div>
+            <div class="title">{{groomsman.role}}</div>
           </div>
         </div>
       </div>

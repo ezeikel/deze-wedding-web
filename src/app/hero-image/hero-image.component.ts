@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Image } from '../image/image.model';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FirebaseApp } from 'angularfire2';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-hero-image',
@@ -8,9 +8,19 @@ import { Image } from '../image/image.model';
   styleUrls: ['./hero-image.component.css']
 })
 export class HeroImageComponent implements OnInit {
-  hero = new Image('Dumebi & Ezeikel', '..', 'He who finds a wife finds a good thing, And obtains favor from the Lord.', 'Proverbs 18:22', '../../assets/img/prewed.jpg');
+  hero = {
+    title: 'Dumebi & Ezeikel',
+    quote: 'He who finds a wife finds a good thing, And obtains favor from the Lord.',
+    quoteRef: 'Proverbs 18:22',
+    src: '' //'../../assets/img/prewed.jpg'
+  }
 
-  constructor() { }
+  constructor(@Inject(FirebaseApp) firebaseApp: firebase.app.App) {
+    const storageRef = firebaseApp.storage().ref().child(`hero/hero.jpg`);
+    storageRef.getDownloadURL().then(url => {
+      this.hero.src = url;
+    });
+   }
 
   ngOnInit() {
   }
