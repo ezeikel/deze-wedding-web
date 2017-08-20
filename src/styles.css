@@ -121,8 +121,25 @@ input.ng-dirty.ng-invalid {
   color: var(--color-light-grey);
 }
 
+.p-title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .p-title {
+  position: relative;
   margin: 30px 0;
+}
+
+.p-title:after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: var(--color-gold);
+  position: absolute;
+  bottom: -8px;
+  width: 100%;
 }
 
 .wf-loading {
