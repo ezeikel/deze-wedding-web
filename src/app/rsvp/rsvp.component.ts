@@ -13,6 +13,7 @@ export class RsvpComponent implements OnInit {
   items: FirebaseListObservable<any[]>;
   guestName: string;
   submitted: boolean = false;
+  rsvpClosed: boolean = true;
 
   constructor(private db: AngularFireDatabase) {
     this.items = db.list('/guests');

@@ -8,8 +8,11 @@
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-9 form-container">
+      <div *ngIf="rsvpClosed" class="form-message form-error-message">
+        <p><span>PLEASE NOTE</span>: The RSVP is now closed. Thank you :)</p>
+      </div>
       <form #rsvpForm="ngForm" (ngSubmit)="onSubmit();rsvpForm.reset()">
-        <div *ngIf="submitted" class="form-success-message">
+        <div *ngIf="submitted" class="form-message form-success-message">
           <p>Thank you {{guestName}} for the RSVP. See you next month! :)</p>
         </div>
 
@@ -59,7 +62,7 @@
           <label>Last Name</label>
           <input type="text" [(ngModel)]="this.guest.plusOne.lastName" name="plusOneLastName" placeholder="Daddy" maxlength="30" #plusOneLastName="ngModel" [required]="this.guest.plusOne" />
         </span>
-        <button [disabled]="!rsvpForm.form.valid" type="submit"><a>Submit</a> </button>
+        <button [disabled]="!rsvpForm.form.valid && rsvpClosed" type="submit"><a>Submit</a> </button>
       </form>
     </div>
     <div class="col-xs-12 col-md-3 stats-container">
