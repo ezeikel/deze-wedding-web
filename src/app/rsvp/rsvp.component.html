@@ -22,7 +22,7 @@
           </div>
         </div>
         <label>First Name:</label>
-        <input type="text" [(ngModel)]="this.guest.firstName" name="firstName" placeholder="Biggie" maxlength="30" #firstName="ngModel"  required />
+        <input type="text" [(ngModel)]="this.guest.firstName" [disabled]="rsvpClosed" name="firstName" placeholder="Biggie" maxlength="30" #firstName="ngModel"  required />
 
         <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="error-message">
           <div *ngIf="lastName.errors.required">
@@ -30,7 +30,7 @@
           </div>
         </div>
         <label>Last Name:</label>
-        <input type="text" [(ngModel)]="this.guest.lastName" name="lastName" placeholder="Smalls" maxlength="30" #lastName="ngModel"  required />
+        <input type="text" [(ngModel)]="this.guest.lastName" [disabled]="rsvpClosed" name="lastName" placeholder="Smalls" maxlength="30" #lastName="ngModel"  required />
 
         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
           <div *ngIf="email.errors.required">
@@ -41,10 +41,10 @@
           </div>
         </div>
         <label>Email:</label>
-        <input type="email" [(ngModel)]="this.guest.email" name="email" placeholder="biggie@smalls.com" maxlength="50"  #email="ngModel" required email />
+        <input type="email" [(ngModel)]="this.guest.email" [disabled]="rsvpClosed" name="email" placeholder="biggie@smalls.com" maxlength="50"  #email="ngModel" required email />
 
         <label>Plus One? *</label>
-        <input type="checkbox" [(ngModel)]="this.guest.bringingPlusOne" name="bringingPlusOne" />
+        <input type="checkbox" [(ngModel)]="this.guest.bringingPlusOne" [disabled]="rsvpClosed" name="bringingPlusOne" />
         <span class="disclaimer">*Please Note: Plus ones are not guaranteed and will need approval by the couple before the day.</span>
         <span *ngIf="this.guest.bringingPlusOne" class="plus-one-details">
           <div *ngIf="plusOneFirstName.invalid && (plusOneFirstName.dirty || plusOneFirstName.touched)" class="error-message">
