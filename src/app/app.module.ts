@@ -62,7 +62,7 @@ const routes: Routes = [
     AngularFireDatabaseModule,
     RouterModule.forRoot(
       routes,
-      { enableTracing: true }
+      { enableTracing: false }
     )
   ],
   providers: [
