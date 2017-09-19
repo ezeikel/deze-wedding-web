@@ -8,16 +8,27 @@
   </div>
   <div class="row">
     <div class="location location__church col-xs-12 col-md-6">
-      <h2 class="location__title">Church</h2>
+      <h2 class="location__name">Church Ceremony</h2>
+      <h3 class="location__time detail"><span>Time:</span> 10:00am</h3>
+      <div class="location__address detail">
+        <h3><span>Address:</span> {{church.name}}</h3>
+        <address>{{church.address}}</address>
+      </div>
       <div class="location__image" [ngStyle]="{'background-image': 'url(' + church.imgSrc + ')'}"></div>
-      <h3 class="location__name">{{church.name}}</h3>
-      <div class="location__address">{{church.address}}</div>
+      <iframe
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.853560440114!2d-0.01612968423242252!3d51.44248317962453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760210c79afea7%3A0x7469db47537089b8!2sHoly+Cross+Roman+Catholic+Primary+School!5e0!3m2!1sen!2suk!4v1505862543019" allowfullscreen>
+    </iframe>
     </div>
     <div class="location location__reception col-xs-12 col-md-6">
-      <h2 class="location__title">Reception</h2>
+      <h2 class="location__name">Wedding Reception</h2>
+      <h3 class="location__time detail"><span>Time:</span> 03:00pm</h3>
+      <div class="location__address detail">
+        <h3><span>Address:</span> {{reception.name}}</h3>
+        <address>{{reception.address}}</address>
+      </div>
       <div class="location__image" [ngStyle]="{'background-image': 'url(' + reception.imgSrc + ')'}"></div>
-      <h3 class="location__name">{{reception.name}}</h3>
-      <div class="location__address">{{reception.address}}</div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.5644666228204!2d-0.044895783569123035!3d51.6128683796526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b4dc0375fa3%3A0x36b96e2f49e526b5!2sMeridian+Grand!5e0!3m2!1sen!2suk!4v1505862766219" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
 </div>
