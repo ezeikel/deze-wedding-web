@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
 import { Guest } from '../guest/guest.model';
 
@@ -11,7 +11,7 @@ import { Guest } from '../guest/guest.model';
 })
 export class RsvpComponent implements OnInit {
   guest: Guest;
-  items: Observable<any[]>;
+  items: any; //Observable<any[]>;
   guestName: string;
   submitted: boolean = false;
   rsvpClosed: boolean = true;
@@ -38,6 +38,8 @@ export class RsvpComponent implements OnInit {
       this.guest.plusOne['firstName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['firstName']));
       this.guest.plusOne['lastName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['lastName']));
     }
+
+    const guestsRef = db.list('guests');
 
     this.items.push(this.guest);
     this.submitted = true;
