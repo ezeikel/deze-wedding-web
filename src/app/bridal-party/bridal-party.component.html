@@ -13,7 +13,7 @@
         <div *ngFor="let bridesmaid of bridalParty.bridesmaids" class="avatar bridesmaid-avatar">
           <div class="bridesmaid">
             <span class="name">{{bridesmaid.name | capitalize}}</span>
-            <div class="picture" [ngStyle]="{'background-image': 'url(' + bridesmaid.src + ')'}"></div>
+            <div class="picture" [ngStyle]="{'background-image': 'url(' + bridesmaid.src | async + ')'}"></div>
             <div class="title">{{bridesmaid.role}}</div>
           </div>
         </div>
@@ -25,7 +25,7 @@
         <div *ngFor="let groomsman of bridalParty.groomsmen" class="avatar groomsman-avatar">
           <div class="groomsman">
             <span class="name">{{groomsman.name | capitalize}}</span>
-            <div class="picture" [ngStyle]="{'background-image': 'url(' + groomsman.src + ')'}"></div>
+            <div class="picture" [ngStyle]="{'background-image': 'url(' + groomsman.src | async + ')'}"></div>
             <div class="title">{{groomsman.role}}</div>
           </div>
         </div>

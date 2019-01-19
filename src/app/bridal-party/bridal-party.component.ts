@@ -1,7 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FirebaseApp } from 'angularfire2';
-import * as firebase from 'firebase';
-
+import { AngularFireStorage } from "@angular/fire/storage";
 @Component({
   selector: 'app-bridal-party',
   templateUrl: './bridal-party.component.html',
@@ -10,39 +8,37 @@ import * as firebase from 'firebase';
 export class BridalPartyComponent implements OnInit {
   bridalParty = {
     groomsmen: [
-      {name: 'deji', role: 'Best Man', src: ''},
-      {name: 'richard', role: 'Groomsman', src: ''},
-      {name: 'marvin', role: 'Groomsman', src: ''},
-      {name: 'yemi', role: 'Groomsman', src: ''},
-      {name: 'anthony', role: 'Groomsman', src: ''}
+      {name: 'deji', role: 'Best Man', src: null},
+      {name: 'richard', role: 'Groomsman', src: null},
+      {name: 'marvin', role: 'Groomsman', src: null},
+      {name: 'yemi', role: 'Groomsman', src: null},
+      {name: 'anthony', role: 'Groomsman', src: null}
     ],
     bridesmaids: [
-      {name: 'rosa', role: 'Chief Bridesmaid', src: ''},
-      {name: 'mary', role: 'Bridesmaid', src: ''},
-      {name: 'jasmine', role: 'Bridesmaid', src: ''},
-      {name: 'alex', role: 'Bridesmaid', src: ''},
+      {name: 'rosa', role: 'Chief Bridesmaid', src: null},
+      {name: 'mary', role: 'Bridesmaid', src: null},
+      {name: 'jasmine', role: 'Bridesmaid', src: null},
+      {name: 'alex', role: 'Bridesmaid', src: null},
     ]
   };
 
-  constructor(@Inject(FirebaseApp) firebaseApp: firebase.app.App) {
+  constructor(private storage: AngularFireStorage) {
     const groomsmenCount = this.bridalParty.groomsmen.length;
 
     for (let i = 0; i < groomsmenCount; i++) {
       const groomsman = this.bridalParty.groomsmen[i];
-      const storageRef = firebaseApp.storage().ref().child(`bridal-party/${groomsman.name}.jpg`);
-      storageRef.getDownloadURL().then(url => {
-        groomsman.src = url;
-      });
+      const storageRef = this.storage.ref(`bridal-party/${groomsman.name}.jpg`);
+
+      groomsman.src = storageRef.getDownloadURL();
     }
 
     const bridesmaidsCount = this.bridalParty.bridesmaids.length;
-
+    this.storage.ref
     for (let i = 0; i < bridesmaidsCount; i++) {
       const bridesmaid = this.bridalParty.bridesmaids[i];
-      const storageRef = firebaseApp.storage().ref().child(`bridal-party/${bridesmaid.name}.jpg`);
-      storageRef.getDownloadURL().then(url => {
-        bridesmaid.src = url;
-      });
+      const storageRef = this.storage.ref(`bridal-party/${bridesmaid.name}.jpg`);
+
+      bridesmaid.src = storageRef.getDownloadURL();
     }
 
   }

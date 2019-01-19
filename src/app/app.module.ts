@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireStorageModule } from "@angular/fire/storage";
 import { firebaseConfig } from './../environments/firebase.config';
 
 import { CapitalizePipe } from './pipes/capitalize.pipe';
@@ -60,6 +61,7 @@ const routes: Routes = [
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     RouterModule.forRoot(
       routes,
       { enableTracing: false }

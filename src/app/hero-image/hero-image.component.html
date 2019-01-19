@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col col-md-12 hero-image" [ngStyle]="{'background-image': 'url(' + hero.src + ')'}">
+  <div class="col col-md-12 hero-image" [ngStyle]="{'background-image': 'url(' + hero.src | async + ')'}">
     <section [ngClass]="['hero-image__info']">
       <h2 [ngClass]="['hero-image__title']">{{ hero.title }}</h2>
       <div class="hero-image__quote">

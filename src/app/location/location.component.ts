@@ -1,6 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { FirebaseApp } from 'angularfire2';
-import * as firebase from 'firebase';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from "@angular/fire/storage";
 
 @Component({
   selector: 'app-location',
@@ -12,27 +11,21 @@ export class LocationComponent implements OnInit {
   church = {
     name: 'Holy Cross RC Church',
     address: 'Sangley Road, Catford, London, SE6 2LD',
-    imgSrc: ''
+    imgSrc: null
   }
 
   reception = {
     name: 'Meridian Grand',
     address: 'Advent Way, London, N18 3AF',
-    imgSrc: ''
+    imgSrc: null
   }
 
-  constructor(@Inject(FirebaseApp) firebaseApp: firebase.app.App) {
+  constructor(private storage: AngularFireStorage) {
+    const church = this.storage.ref(`venues/holy-cross-church.jpg`);
+    this.church.imgSrc = church.getDownloadURL();
 
-    const church = firebaseApp.storage().ref().child(`venues/holy-cross-church.jpg`);
-    church.getDownloadURL().then(url => {
-      this.church.imgSrc = url;
-    });
-
-    const reception = firebaseApp.storage().ref().child(`venues/meridian-grand.jpg`);
-    reception.getDownloadURL().then(url => {
-      this.reception.imgSrc = url;
-    });
-
+    const reception = this.storage.ref(`venues/meridian-grand.jpg`);
+    this.reception.imgSrc = reception.getDownloadURL();
    }
 
   ngOnInit() {

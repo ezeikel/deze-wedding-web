@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from "rxjs";
 
 import { Guest } from '../guest/guest.model';
 
@@ -10,13 +11,13 @@ import { Guest } from '../guest/guest.model';
 })
 export class RsvpComponent implements OnInit {
   guest: Guest;
-  items: FirebaseListObservable<any[]>;
+  items: Observable<any[]>;
   guestName: string;
   submitted: boolean = false;
   rsvpClosed: boolean = true;
 
   constructor(private db: AngularFireDatabase) {
-    this.items = db.list('/guests');
+    this.items = db.list('guests').valueChanges();
     this.guest = new Guest('','','', false, {});
   }
 
