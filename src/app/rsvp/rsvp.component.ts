@@ -17,7 +17,7 @@ export class RsvpComponent implements OnInit {
   rsvpClosed: boolean = true;
 
   constructor(private db: AngularFireDatabase) {
-    this.items = db.list('guests').valueChanges();
+    this.items = this.db.list('guests').valueChanges();
     this.guest = new Guest('','','', false, {});
   }
 
@@ -39,7 +39,7 @@ export class RsvpComponent implements OnInit {
       this.guest.plusOne['lastName'] = this.upperCaseFirstLetter(this.lowerCase(this.guest.plusOne['lastName']));
     }
 
-    const guestsRef = db.list('guests');
+    const guestsRef = this.db.list('guests');
 
     this.items.push(this.guest);
     this.submitted = true;

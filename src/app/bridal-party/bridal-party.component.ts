@@ -29,7 +29,8 @@ export class BridalPartyComponent implements OnInit {
       const groomsman = this.bridalParty.groomsmen[i];
       const storageRef = this.storage.ref(`bridal-party/${groomsman.name}.jpg`);
 
-      groomsman.src = storageRef.getDownloadURL();
+      //groomsman.src = storageRef.getDownloadURL();
+      storageRef.getDownloadURL().subscribe(val => groomsman.src = val);
     }
 
     const bridesmaidsCount = this.bridalParty.bridesmaids.length;
@@ -38,7 +39,8 @@ export class BridalPartyComponent implements OnInit {
       const bridesmaid = this.bridalParty.bridesmaids[i];
       const storageRef = this.storage.ref(`bridal-party/${bridesmaid.name}.jpg`);
 
-      bridesmaid.src = storageRef.getDownloadURL();
+      //bridesmaid.src = storageRef.getDownloadURL();
+      storageRef.getDownloadURL().subscribe(val => bridesmaid.src = val);
     }
 
   }

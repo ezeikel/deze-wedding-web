@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="image-container">
-        <div *ngFor="let image of images" class="image" [ngStyle]="{'background-image': 'url(' + image | async + ')'}"></div>
+        <div *ngFor="let image of images" class="image" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
       </div>
     </div>
   </div>

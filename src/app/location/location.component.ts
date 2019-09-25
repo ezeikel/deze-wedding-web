@@ -22,10 +22,10 @@ export class LocationComponent implements OnInit {
 
   constructor(private storage: AngularFireStorage) {
     const church = this.storage.ref(`venues/holy-cross-church.jpg`);
-    this.church.imgSrc = church.getDownloadURL();
+    church.getDownloadURL().subscribe(src => this.church.imgSrc = src);
 
     const reception = this.storage.ref(`venues/meridian-grand.jpg`);
-    this.reception.imgSrc = reception.getDownloadURL();
+    reception.getDownloadURL().subscribe(src => this.reception.imgSrc = src);
    }
 
   ngOnInit() {

@@ -16,7 +16,7 @@ export class HeroImageComponent implements OnInit {
 
   constructor(private storage: AngularFireStorage) {
     const storageRef = this.storage.ref(`hero/hero.jpg`);
-    this.hero.src = storageRef.getDownloadURL();
+    storageRef.getDownloadURL().subscribe(src => this.hero.src = src)
   }
 
   ngOnInit() {}

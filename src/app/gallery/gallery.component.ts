@@ -14,7 +14,7 @@ export class GalleryComponent implements OnInit {
 
     for (let i = 1; i <= count; i++) {
       const storageRef = this.storage.ref(`prewed/prewed-${i}.jpg`);
-      this.images.push(storageRef.getDownloadURL());
+      storageRef.getDownloadURL().subscribe(image => this.images.push(image));
     }
   }
 
